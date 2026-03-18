@@ -18,13 +18,18 @@
     float salary;
 
     // calculate the deductions and final take-home salary
+    //NI_deduction calculation
    NI_deduction = total_salary * (NI / 100);
    salary = total_salary - NI_deduction;
    salary = salary - NI_deduction;
+
+   //tax deduction calculations
    if (salary > 12500) {
       tax_deduction = salary - 12500;
       tax_deduction = tax_deduction * (tax / 100);
    }
+
+   //final take hom salary after deductions
    salary = salary - tax_deduction;
 
 
